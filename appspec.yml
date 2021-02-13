@@ -1,5 +1,5 @@
 version: 0.2
 os: linux
 files:
-  - source: ./tarjet/mutant-2.1.7.RELEASE.jar
+  - source: ./mutant-2.1.7.RELEASE.jar
     destination: ./
