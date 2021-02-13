@@ -11,6 +11,7 @@ phases:
     commands:
       - echo Build completed on `date`
       - mvn package
+      - mv target/mutant-2.1.7.RELEASE.jar .
 artifacts:
   files:
     - mutant-2.1.7.RELEASE.jar
