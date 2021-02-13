@@ -2,19 +2,17 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: corretto8
-  pre_build:
-    commands:
-      - echo In the pre_build phase...
+      java: openjdk11
   build:
     commands:
       - echo Build started on `date`
+      - mvn test
   post_build:
     commands:
       - echo Build completed on `date`
       - mvn package
-      - mv target/mutant-2.1.7.RELEASE.war target/mutant-2.1.7.RELEASE.war
 artifacts:
   files:
-    - mutant-2.1.7.RELEASE.war
-    - .ebextensions/**/*
+    - mutant-2.1.7.RELEASE.jar
+    - appspec.yml
+  discard-paths: yes
