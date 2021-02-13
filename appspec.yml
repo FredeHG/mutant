@@ -2,4 +2,4 @@ version: 0.0
 os: linux
 files:
   - source: ./target/mutant-2.1.7.RELEASE.jar
-    destination: /tmp
+    destination: .
