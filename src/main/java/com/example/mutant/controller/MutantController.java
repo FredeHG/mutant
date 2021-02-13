@@ -12,7 +12,7 @@ public class MutantController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public ResponseEntity<?> isMutant(){
-        return new ResponseEntity<String>("Hola Mundo!",HttpStatus.OK);
+        return new ResponseEntity<String>("Hola Mundo!!",HttpStatus.OK);
     }
 
 }
