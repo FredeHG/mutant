@@ -11,8 +11,7 @@ phases:
     commands:
       - echo Build completed on `date`
       - mvnw package -DskipTests
-      finally:
-        - mv mutant-2.1.7.RELEASE.jar ../
+      - mv mutant-2.1.7.RELEASE.jar ../
 artifacts:
   files:
     - mutant-2.1.7.RELEASE.jar
