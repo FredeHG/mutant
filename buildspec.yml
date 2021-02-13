@@ -10,7 +10,7 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-      - mvnw package -DskipTests
+      - mvnw package
       - mv mutant-2.1.7.RELEASE.jar ../
 artifacts:
   files:
