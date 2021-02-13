@@ -11,8 +11,8 @@ phases:
     commands:
       - echo Build completed on `date`
       - mvnw package
-      - mv mutant-2.1.7.RELEASE.jar ../
 artifacts:
   files:
     - mutant-2.1.7.RELEASE.jar
+    - appspec.yml
   discard-paths: yes
