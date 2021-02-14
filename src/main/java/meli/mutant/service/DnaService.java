@@ -1,13 +1,10 @@
-package com.example.mutant.service;
+package meli.mutant.service;
 
-import com.example.mutant.Model.Dna;
-import com.example.mutant.Model.Stats;
+import meli.mutant.Model.Dna;
+import meli.mutant.Model.Stats;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-
-import java.util.Arrays;
-import java.util.HashMap;
 
 @Service
 public class DnaService {

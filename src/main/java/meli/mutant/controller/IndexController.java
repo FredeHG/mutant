@@ -1,4 +1,4 @@
-package com.example.mutant.controller;
+package meli.mutant.controller;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -14,7 +14,7 @@ public class IndexController {
 
     @RequestMapping(value = "/")
     public Map<String, String> APIstatus() {
-        Map<String, String> response = new HashMap<String, String>();
+        Map<String, String> response = new HashMap<>();
         response.put("status", "OK");
         response.put("version", appVersion);
         return response;

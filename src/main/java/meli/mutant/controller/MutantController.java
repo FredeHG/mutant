@@ -1,8 +1,8 @@
-package com.example.mutant.controller;
+package meli.mutant.controller;
 
-import com.example.mutant.Model.Dna;
-import com.example.mutant.Model.Stats;
-import com.example.mutant.service.DnaService;
+import meli.mutant.Model.Dna;
+import meli.mutant.Model.Stats;
+import meli.mutant.service.DnaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
