@@ -1,6 +1,7 @@
 package com.example.mutant.controller;
 
 import com.example.mutant.service.DnaService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MutantController {
 
+    @Autowired
     private DnaService dnaService;
 
 
