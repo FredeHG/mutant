@@ -1,4 +1,4 @@
-package com.example.mutant;
+package meli.mutant;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

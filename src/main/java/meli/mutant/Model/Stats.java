@@ -1,4 +1,4 @@
-package com.example.mutant.Model;
+package meli.mutant.Model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;

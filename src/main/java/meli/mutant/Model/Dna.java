@@ -1,4 +1,4 @@
-package com.example.mutant.Model;
+package meli.mutant.Model;
 
 public class Dna {
 
