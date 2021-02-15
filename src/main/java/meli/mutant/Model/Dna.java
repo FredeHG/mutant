@@ -5,7 +5,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public class Dna {
 
-    @ApiModelProperty(value = "The dna to analyze", dataType = "List", example = "[ATGCGA,CAGTGC,TTATGT,AGAAGG,CCCCTA,TCACTG]",required = true)
+    @ApiModelProperty(value = "The dna to analyze", dataType = "String[]", example = "[ATGCGA,CAGTGC,TTATGT,AGAAGG,CCCCTA,TCACTG]",required = true)
     private String [] dna;
 
     @JsonIgnore

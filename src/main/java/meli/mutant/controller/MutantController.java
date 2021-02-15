@@ -1,5 +1,6 @@
 package meli.mutant.controller;
 
+import io.swagger.annotations.Api;
 import meli.mutant.Model.Dna;
 import meli.mutant.Model.Stats;
 import meli.mutant.service.DnaService;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@Api(tags = {"Dna Analyzer"})
 public class MutantController {
 
     @Autowired
@@ -22,7 +24,7 @@ public class MutantController {
 
     @ApiOperation(value = "Send data and know if it is a mutant", notes = "200 mean it's a mutant!",tags = "Dna Analyzer")
     @ApiResponses({
-            @ApiResponse(code = 200, response = void.class, message = "It's mutant"),
+            @ApiResponse(code = 200, response = Object.class, message = "It's mutant"),
             @ApiResponse(code = 403, message = "Forbidden")
     })
     @RequestMapping(value = "/api/v1/mutant", method = RequestMethod.POST)
