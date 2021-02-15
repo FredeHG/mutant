@@ -3,6 +3,10 @@ package meli.mutant.controller;
 import meli.mutant.Model.Dna;
 import meli.mutant.Model.Stats;
 import meli.mutant.service.DnaService;
+
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,12 +20,18 @@ public class MutantController {
     @Autowired
     private DnaService dnaService;
 
-    @RequestMapping(value = "/mutant", method = RequestMethod.POST)
+    @ApiOperation(value = "Send data and know if it is a mutant", notes = "200 mean it's a mutant!",tags = "Dna Analyzer")
+    @ApiResponses({
+            @ApiResponse(code = 200, response = void.class, message = "It's mutant"),
+            @ApiResponse(code = 403, message = "Forbidden")
+    })
+    @RequestMapping(value = "/api/v1/mutant", method = RequestMethod.POST)
     public ResponseEntity<?> isMutant(@RequestBody Dna dna){
         return dnaService.isMutant(dna);
     }
 
-    @RequestMapping(value = "/stats", method = RequestMethod.GET)
+    @ApiOperation(value = "Get Stats of examiner", tags = "Dna Analyzer")
+    @RequestMapping(value = "/api/v1/stats", method = RequestMethod.GET)
     public Stats getStats(){
         return dnaService.getStats();
     }
