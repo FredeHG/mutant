@@ -2,11 +2,14 @@ package meli.mutant.Model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModelProperty;
+import org.springframework.data.annotation.Id;
+
 
 public class Dna {
 
+    @Id
     @ApiModelProperty(value = "The dna to analyze", dataType = "String[]", example = "[ATGCGA,CAGTGC,TTATGT,AGAAGG,CCCCTA,TCACTG]",required = true)
-    private String [] dna;
+    private String dna;
 
     @JsonIgnore
     private boolean mutant;
@@ -14,11 +17,12 @@ public class Dna {
     public Dna(){}
 
     public String[] getDna(){
-        return dna;
+        int rows = (int) Math.sqrt(this.dna.length());
+        return dna.split(String.format("(?<=\\G.{%d})", rows));
     }
 
     public void setDna(String [] dna) {
-        this.dna = dna;
+        this.dna = String.join("", dna);
     }
 
     public boolean isMutant() {
