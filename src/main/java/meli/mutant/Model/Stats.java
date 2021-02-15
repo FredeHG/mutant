@@ -8,21 +8,21 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonTypeInfo(include = JsonTypeInfo.As.WRAPPER_OBJECT, use = JsonTypeInfo.Id.NAME)
 public class Stats {
 
-    private Integer countMutantDna;
-    private Integer countHumanDna;
+    private Long countMutantDna;
+    private Long countHumanDna;
 
-    public Stats(Integer countMutantDna, Integer countHumanDna) {
+    public Stats(Long countMutantDna, Long countHumanDna) {
         this.countMutantDna = countMutantDna;
         this.countHumanDna = countHumanDna;
     }
 
     @JsonProperty("count_mutant_dna")
-    public Integer getCountMutantDna() {
+    public Long getCountMutantDna() {
         return countMutantDna;
     }
 
     @JsonProperty("count_human_dna")
-    public Integer getCountHumanDna() {
+    public Long getCountHumanDna() {
         return countHumanDna;
     }
 
