@@ -1,8 +1,14 @@
 package meli.mutant.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import io.swagger.annotations.ApiModelProperty;
+
 public class Dna {
 
+    @ApiModelProperty(value = "The dna to analyze", dataType = "List", example = "[ATGCGA,CAGTGC,TTATGT,AGAAGG,CCCCTA,TCACTG]",required = true)
     private String [] dna;
+
+    @JsonIgnore
     private boolean mutant;
 
     public Dna(){}
