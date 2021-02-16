@@ -15,12 +15,10 @@ public class DnaService {
     @Autowired
     DnaRepository dnaRepository;
 
-    public ResponseEntity<?> isMutant(Dna dna){
-        HttpStatus result;
+    public boolean isMutant(Dna dna){
         dna.evaluateDna();
         dnaRepository.save(dna);
-        result = (dna.isMutant())? HttpStatus.OK : HttpStatus.FORBIDDEN;
-        return new ResponseEntity<>(result);
+        return dna.isMutant();
     }
 
     public Stats getStats() {

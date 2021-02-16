@@ -32,7 +32,8 @@ public class MutantController {
     })
     @RequestMapping(value = "/api/v1/mutant", method = RequestMethod.POST)
     public ResponseEntity<?> isMutant(@RequestBody Dna dna){
-        return dnaService.isMutant(dna);
+        HttpStatus response = (dnaService.isMutant(dna))? HttpStatus.OK : HttpStatus.FORBIDDEN;
+        return new ResponseEntity<>(response);
     }
 
     @ApiOperation(value = "Get Stats of examiner", tags = "Dna Analyzer")
