@@ -77,8 +77,9 @@ public class DnaAnalyzer {
 
     private void validateDna(String[] dna) {
         String VALIDATE_LETTERS_REGEX = String.format("\\b[A,T,C,G]{%d}\\b", dna.length);
-        for (String sequence: dna )
-            if (sequence.matches(VALIDATE_LETTERS_REGEX))
+        for (String sequence: dna ) {
+            if (!sequence.matches(VALIDATE_LETTERS_REGEX))
                 throw new InvalidDnaException("El DNA contiene letras invalidas o la longitud no es NxN");
+        }
     }
 }
