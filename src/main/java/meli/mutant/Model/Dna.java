@@ -2,6 +2,8 @@ package meli.mutant.Model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModelProperty;
+import meli.mutant.exception.InvalidDnaException;
+import meli.mutant.util.DnaAnalyzer;
 import org.springframework.data.annotation.Id;
 
 
@@ -23,6 +25,10 @@ public class Dna {
 
     public void setDna(String [] dna) {
         this.dna = String.join("", dna);
+    }
+
+    public void evaluateDna() throws InvalidDnaException {
+        setMutant(new DnaAnalyzer().isMutant(getDna()));
     }
 
     public boolean isMutant() {

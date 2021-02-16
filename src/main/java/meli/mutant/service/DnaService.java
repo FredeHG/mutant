@@ -3,6 +3,7 @@ package meli.mutant.service;
 import meli.mutant.Model.Dna;
 import meli.mutant.Model.Stats;
 import meli.mutant.repository.DnaRepository;
+import meli.mutant.util.DnaAnalyzer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,9 +16,11 @@ public class DnaService {
     DnaRepository dnaRepository;
 
     public ResponseEntity<?> isMutant(Dna dna){
-        dna.setMutant(true);
+        HttpStatus result;
+        dna.evaluateDna();
         dnaRepository.save(dna);
-        return new ResponseEntity<>(HttpStatus.OK);
+        result = (dna.isMutant())? HttpStatus.OK : HttpStatus.FORBIDDEN;
+        return new ResponseEntity<>(result);
     }
 
     public Stats getStats() {
@@ -25,4 +28,5 @@ public class DnaService {
         Long total = dnaRepository.count();
         return new Stats(mutants, total);
     }
+
 }
