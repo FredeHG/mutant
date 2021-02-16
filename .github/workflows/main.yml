@@ -21,8 +21,7 @@ jobs:
       - name: Maven Verify
         run: mvn -B clean verify
       - name: codecov
-      - uses: FredeHG/checkout@master
-      - uses: FredeHG/mutant@0.1
+        uses: FredeHG/checkout@master
         with:
           files: ./target/site/jacoco-ut/jacoco.xml
           name: codecov-umbrella
