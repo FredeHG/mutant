@@ -5,14 +5,14 @@ Servicio Rest para analizar si un adn en especifico es de un mutante o no.
 
 ---
 
-##Guia
+## Guia
 Este servicio cuenta con 2 Endpoints:
 
 Uno para saber si un dna es de un mutante y otro para obtener las estadisticas de los dna consuntados
 
 Para mas información visitar la documentación en [Swagger](http://mutantmeli-env.eba-vmskaduw.us-east-2.elasticbeanstalk.com/swagger-ui.html)
 
-##Arquitectura
+## Arquitectura
 
 El servicio esta hosteado en el servicio de AWS "elastic beanstalk" esta conectado con una base de datos mongodb atlas.
 El proyecto cuenta con GitHub Actions para correr el set de test en los pedidos de Pull Request
