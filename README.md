@@ -1,5 +1,6 @@
 # Mutant Analyzer
-[![Build](https://github.com/FredeHG/mutant/workflows/Feature_Branch/badge.svg)](https://github.com/FredeHG/mutant/actions)
+![Build](https://github.com/actions/hello-world/workflows/Feature%20Branch/badge.svg?event=pull_request)
+
 Servicio Rest para analizar si un adn en especifico es de un mutante o no.
 
 ---
