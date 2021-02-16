@@ -1,5 +1,6 @@
 # Mutant Analyzer
 ![Build](https://github.com/FredeHG/mutant/workflows/build/badge.svg)
+![Coverage](https://img.shields.io/coveralls/github/FredeHG/mutant)
 
 Servicio Rest para analizar si un adn en especifico es de un mutante o no.
 
@@ -14,7 +15,7 @@ Para mas información visitar la documentación en [Swagger](http://mutantmeli-e
 
 ## Arquitectura
 
-El servicio esta hosteado en el servicio de AWS "elastic beanstalk" esta conectado con una base de datos mongodb atlas.
+El servicio esta hosteado en AWS "elastic beanstalk" esta conectado con una base de datos mongodb atlas.
 El proyecto cuenta con GitHub Actions para correr el set de test en los pedidos de Pull Request
 y una vez en la rama main el servicio de pipelines de AWS toma el codigo para hacer el deploy en produccion automaticamente. 
 
