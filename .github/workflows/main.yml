@@ -21,7 +21,7 @@ jobs:
       - name: Maven Verify
         run: mvn -B clean verify
       - name: Upload coverage to Codecov
-        uses: FredeHG/mutant@v0.1
+        uses: FredeHG/mutant@0.1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: ./jacoco.xml
