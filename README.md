@@ -1,6 +1,6 @@
 # Mutant Analyzer
 ![Build](https://github.com/FredeHG/mutant/workflows/build/badge.svg)
-
+[![codecov](https://codecov.io/gh/FredeHG/mutant/branch/master/graph/badge.svg)](https://codecov.io/gh/FredeHG/mutant)
 Servicio Rest para analizar si un adn en especifico es de un mutante o no.
 
 ---
@@ -14,6 +14,9 @@ Para mas información visitar la documentación en [Swagger](http://mutantmeli-e
 
 ## Consideraciones
 
+Solo son validas las letras [A, C, G, T]
+
+Se toma como 2 cadenas de 4 letras consecutivas si una secuencia tiene AAAACCCC o AAAAAAAA
 
 
 ## Arquitectura
