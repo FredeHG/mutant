@@ -17,7 +17,7 @@ Este servicio cuenta con 2 Endpoints:
 
 Uno para saber si un dna es de un mutante y otro para obtener las estadisticas de los dna consuntados
 
-Para averiguar si un DNA es de un mutante hay que enviar el DNA en formato Array de String
+Para averiguar si un DNA es de un mutante hay que enviar el DNA en formato Array de String. El programa devolvera un 200 si es un mutante o un 403 si no lo es
 
 Para mas información visitar la documentación en [Swagger](http://mutantmeli-env.eba-vmskaduw.us-east-2.elasticbeanstalk.com/swagger-ui.html)
 
