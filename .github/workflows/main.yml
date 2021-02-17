@@ -6,7 +6,7 @@ on:
 
 jobs:
 
-  test:
+  build:
     name: Unit Test
     runs-on: ubuntu-18.04
 
@@ -22,7 +22,7 @@ jobs:
         run: mvn -B clean verify
 
   coverage:  
-    needs: test
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
