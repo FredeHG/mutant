@@ -1,6 +1,5 @@
 # Mutant Analyzer
 ![Build](https://github.com/FredeHG/mutant/workflows/build/badge.svg)
-[![codecov](https://codecov.io/gh/codecov/example-java/branch/master/graph/badge.svg)](https://codecov.io/gh/codecov/example-java)
 
 Servicio Rest para analizar si un adn en especifico es de un mutante o no.
 
@@ -12,6 +11,10 @@ Este servicio cuenta con 2 Endpoints:
 Uno para saber si un dna es de un mutante y otro para obtener las estadisticas de los dna consuntados
 
 Para mas información visitar la documentación en [Swagger](http://mutantmeli-env.eba-vmskaduw.us-east-2.elasticbeanstalk.com/swagger-ui.html)
+
+## Consideraciones
+
+
 
 ## Arquitectura
 
