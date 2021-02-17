@@ -1,6 +1,6 @@
 # Mutant Analyzer
 ![Build](https://github.com/FredeHG/mutant/workflows/build/badge.svg)
-[![codecov](https://codecov.io/gh/FredeHG/mutant/branch/master/graph/badge.svg)](https://codecov.io/gh/FredeHG/mutant)
+[![codecov](https://codecov.io/gh/FredeHG/mutant/branch/main/graph/badge.svg?token=2U9IWQD5GP)](https://codecov.io/gh/FredeHG/mutant)
 
 Servicio Rest para analizar si un ADN es de un mutante o no.
 
