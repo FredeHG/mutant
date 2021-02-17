@@ -27,7 +27,7 @@ jobs:
           percentage: "80"
           filename: "./target/site/jacoco/jacoco.xml"
       - name: Generate the badge SVG image
-        uses: emibcn/badge-action@v1
+        uses: FredeHG/mutant@0.2
         id: badge
         with:
           label: 'Coverage'
