@@ -12,6 +12,10 @@ Uno para saber si un dna es de un mutante y otro para obtener las estadisticas d
 
 Para mas información visitar la documentación en [Swagger](http://mutantmeli-env.eba-vmskaduw.us-east-2.elasticbeanstalk.com/swagger-ui.html)
 
+## Consideraciones
+
+
+
 ## Arquitectura
 
 El servicio esta hosteado en AWS "elastic beanstalk" esta conectado con una base de datos mongodb atlas.
