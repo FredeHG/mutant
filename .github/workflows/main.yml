@@ -20,4 +20,14 @@ jobs:
         run: mvn -B clean package -DskipTests
       - name: Maven Verify
         run: mvn -B clean verify
+      - name: Upload coverage to Codecov
+        uses: FredeHG/mutant@v0.1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: ./jacoco.xml
+          directory: ./target/site/jacoco-ut
+          name: codecov-umbrella
+          fail_ci_if_error: true
+          path_to_write_report: ./coverage/codecov_report.txt
+          verbose: true
 
