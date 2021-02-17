@@ -19,19 +19,10 @@ jobs:
       - name: Maven Package
         run: mvn -B clean package -DskipTests
       - name: Maven Verify
-        run: mvn -B clean verify
-      - name: Check test coverage
-        id: test-coverage
-        uses: FredeHG/mutant@0.2
+        run: mvn -B test -P coverage --no-transfer-progress
+
+      - uses: FredeHG/mutant@0.2
         with:
-          percentage: "80"
-          filename: "./target/site/jacoco/jacoco.xml"
-      - name: Generate the badge SVG image
-        uses: FredeHG/mutant@0.2
-        id: badge
-        with:
-          label: 'Coverage'
-          status: ${{ steps.coverage.outputs.coverage }}
-          path: ./badges/test-coverage.svg
-          color: ${{ steps.coverage.outputs.coveragelines > 75 && 'green' || 'red' }}
+          file: ./**/target/site/jacoco/jacoco.xml
+          name: codecov
 
