@@ -13,7 +13,7 @@ Uno para saber si un dna es de un mutante y otro para obtener las estadisticas d
 Para mas información visitar la documentación en [Swagger](http://mutantmeli-env.eba-vmskaduw.us-east-2.elasticbeanstalk.com/swagger-ui.html)
 
 ## Consideraciones
-El algoritmo que
+Se toma como 2 cadenas de 4 letras consecutivas si una secuencia tiene AAAACCCC o AAAAAAAA
 
 
 ## Arquitectura
