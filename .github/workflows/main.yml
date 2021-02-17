@@ -20,10 +20,3 @@ jobs:
         run: mvn -B clean package -DskipTests
       - name: Maven Verify
         run: mvn -B clean verify
-      - name: codecov
-        uses: FredeHG/checkout@master
-        with:
-          files: ./target/site/jacoco-ut/jacoco.xml
-          name: codecov-umbrella
-          fail_ci_if_error: true
-          verbose: true
