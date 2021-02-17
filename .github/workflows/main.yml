@@ -31,7 +31,7 @@ jobs:
           java-version: 11
       - run: mvn -B verify -P coverage --no-transfer-progress
 
-      - uses: FredeHG/mutant@0.2
+      - uses: codecov/codecov-action@v1
         with:
           file: ./**/target/site/jacoco/jacoco.xml
           name: codecov
