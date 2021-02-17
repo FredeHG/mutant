@@ -10,7 +10,7 @@ Servicio Rest para analizar si un ADN es de un mutante o no.
 
 Solo son validas las letras [A, C, G, T]
 
-Se toma como 2 cadenas de 4 letras consecutivas si una secuencia tiene AAAACCCC o AAAAAAAA
+Se toma como 2 cadenas de 4 letras consecutivas si una secuencia tiene por ejemplo AAAACCCC o AAAAAAAA o AAAACAAAAA
 
 ## Guia
 Este servicio cuenta con 2 Endpoints:
@@ -20,6 +20,8 @@ Uno para saber si un dna es de un mutante y otro para obtener las estadisticas d
 Para averiguar si un DNA es de un mutante hay que enviar el DNA en formato Array de String. El programa devolvera un 200 si es un mutante o un 403 si no lo es
 
 Para mas información visitar la documentación en [Swagger](http://mutantmeli-env.eba-vmskaduw.us-east-2.elasticbeanstalk.com/swagger-ui.html)
+
+[Link](http://mutantmeli-env.eba-vmskaduw.us-east-2.elasticbeanstalk.com) del servicio
 
 
 ## Arquitectura
